@@ -30,12 +30,11 @@ Bluebook 是一款开源自由的协作管理工具，采用 Node.js 开发。
 
 ## 软件依赖模块
 
-涉及到数据库的基本操作、主题模板的渲染，和 cookie 的存取，所以需要以下依赖：
+涉及到数据库的基本操作、主题模板的渲染，所以需要以下依赖：
 
 ```
 npm install mysql --save
 npm install art-template --save
-npm install cookie-parser --save
 ```
 
 最后，祝玩得开心。
