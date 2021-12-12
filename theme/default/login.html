@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{login_title}}</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="Shortcut icon" href="res/icon.jpg"/>
+<link rel="stylesheet" href="style.css"/>
+<script src="main.js"></script>
+</head>
+<body>
+    <div class="cover"></div>
+    <div class="login">
+        <h1>{{login_title}}</h1>
+        <h2>{{login_desc}}</h2>
+        <form>
+            <input type="text" name="user_name" placeholder="{{login_input_username}}"/>
+            <input type="password" name="" placeholder="{{login_input_password}}"/>
+            <div class="register_field" id="register_field">
+                <input type="password" name="" placeholder="{{login_input_password_again}}"/>
+                <input type="text" name="" placeholder="{{login_input_referee}}"/>
+            </div>
+            <input id="login_button" type="submit" value="{{login_button_text}}" name=""/>
+            <a id="i_want_register" href="javascript:void(0);" onclick="display_register_field();">{{login_i_want_register}}</a>
+        </form>
+    </div>
+</body>
+</html>

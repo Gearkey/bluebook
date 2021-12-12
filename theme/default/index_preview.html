@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bluebook</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="Shortcut icon" href="res/icon.jpg"/>
+<link rel="stylesheet" href="style.css"/>
+<script src="main.js"></script>
+</head>
+<body>
+<div class="cover" id="cover" onclick="hide_material_detail();"><!-- 遮罩层 --></div>
+<div class="header">
+    <h2 class="header_home focus"><a href="/">首页</a></h2>
+    <h2 class="header_outside"><a href="outside">外部</a></h2>
+    <h2 class="header_mine"><a href="mine">我的</a></h2>
+</div>
+<div class="wrap">
+    <div class="main">
+        <div class="material_area">
+            <div class="material_area_title" onclick="display_material_detail()"><h3><!-- 物料/任务区域标题 -->开启的任务</h3></div>
+            <div class="material_list"><!-- 物料/任务列表 -->
+                <div class="material" id="multi_selection_start_material" onclick="display_material_detail();" ondblclick="turn_on_multi_selection_mode();">
+                    <h4 class="material_desc_title"><!-- 物料名称/任务标题 -->一个小记录（比较长的标题）</h4>
+                    <p class="material_desc_content"><!-- 物料/任务预览内容 -->今天吃了一头鱼，好开心，明天继续~（比较长的内容。。）</p>
+                    <p class="material_desc_time"><!-- 物料/任务预览时间 -->2021-12-10 08:00</p>
+                </div>
+                <div class="material_detail" id="material_detail">
+                    <ul class="material_operation_button_list"><!-- 物料/任务操作按钮列表 -->
+                        <li class="material_operation_button" id="material_operation_focus_button" onclick="display_material_operation_form();"><!-- 支持 -->▲</li>
+                        <li class="material_operation_button"><!-- 反对 -->▼</li>
+                        <li class="material_operation_button">拆解</li>
+                        <li class="material_operation_button">自动化</li>
+                        <li class="material_operation_button">修改</li>
+                        <li class="material_operation_button">完成</li>
+                        <li class="material_operation_button"><!-- 取消 -->X</li>
+                    </ul>
+                    <form class="material_operation_form" id="material_operation_form">
+                        <h5 class="material_operation_form_title"><!--操作表单标题 -->确认xxx？</h5>
+                        <div class="material_detail_content">
+                            <p><textarea placeholder="填写xxx原因" name=""></textarea></p>
+                            <p><input type="button" value="一般按钮" name=""/></p>
+                            <p>
+                                <input type="text" name="" placeholder="输入用户名"/>
+                                <input type="password" name="" placeholder="输入密码"/>
+                                <input type="submit" value="登录" name=""/>
+                            </p>
+                            <p><ul>
+                                <li><input type="radio" name="radio"/> 单选项1</li>
+                                <li><input type="radio" name="radio"/> 单选项2</li>
+                                <li><input type="radio" name="radio"/> 单选项3</li>
+                                <li><input type="radio" name="radio"/> 单选项4</li>
+                            </ul></p>
+                            <p><ul>
+                                <li><input type="checkbox" name="checkbox"/> 多选项1</li>
+                                <li><input type="checkbox" name="checkbox"/> 多选项2</li>
+                                <li><input type="checkbox" name="checkbox"/> 多选项3</li>
+                                <li><input type="checkbox" name="checkbox"/> 多选项4</li>
+                                <li><input type="checkbox" name="checkbox"/> 多选项5</li>
+                            </ul></p>
+                            <p><select>
+                                <option value="">下拉选项1</option>
+                                <option value="">下拉选项2</option>
+                                <option value="">下拉选项3</option>
+                            </select></p>
+                            <h6 class="material_operation_form_title_inside"><!-- 表单内部标题 -->请选择文件</h6>
+                            <p><input type="file" name=""/></p>
+                            <p><input type="date"/> <input type="time"/></p>
+                            <p><input type="datetime-local"/></p>
+                        </div>
+                    </form>
+                    <input class="material_detail_title"  id="material_detail_title" oncdblick="edit_material_detail_title();" type="text" value="一个小记录（比较长的标题）" readonly="readonly"/><!-- 物料名称/任务标题 -->
+                    <div class="material_detail_content" id="material_detail_content" ondbclick="edit_material_detail_content();">物料/任务内容：CSS 边框 CSS 边框属性 CSS边框属性允许你指定一个元素边框的样式和颜色。 在四边都有边框 红色底部边框 圆角边框 左侧边框带宽度，颜色为蓝色 边框样式 边框样式属性指定要显示什么样CSS 边框 CSS 边框属性 CSS边框属性允许你指定一个元素边框的样式和颜色。 在四边都有边框 红色底部边框 圆角边框 左侧边框带宽度，颜色为蓝色 边框样式 边框样式属性指定要显示什么样</div>
+                    <h5 class="material_detail_sub_title">物料/任务关系表</h5>
+                    <table class="material_tree">
+                        <tr><th>关系</th><th>名称</th><th>单位</th><th>预估数量</th><th>需求数量</th><th>计划数量</th><th>实际数量</th><th>剩余数量</th><th>需求团队</th><th>生产团队</th><th>任务队长</th></tr>
+                        <tr><td>本任务</td><td>生产100个笔和橡皮套装</td><td>个</td><td>100</td><td>200</td><td>200</td><td>200</td><td>200</td><td>xx学校</td><td>xx文具制造厂</td><td>xx文具制造厂-小明</td></tr>
+                        <tr><td>父任务</td><td>12月11日给学生加福利</td><td>件</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>xx学校</td><td>xx文具制造厂</td><td>xx学校-小芳</td></tr>
+                        <tr><td>子任务</td><td>生产200只笔</td><td>只</td><td>200</td><td>200</td><td>240</td><td>240</td><td>40</td><td>xx学校</td><td>xx文具制造厂铅笔分部</td><td>xx文具制造厂铅笔分部-小刚</td></tr>
+                        <tr><td>子任务</td><td>生产200只橡皮</td><td>只</td><td>200</td><td>200</td><td>200</td><td>200</td><td>0</td><td>xx学校</td><td>xx文具制造厂橡皮分部</td><td>xx文具制造厂橡皮分部-小红</td></tr>
+                        <tr><td>兄弟任务</td><td>一次集体旅行</td><td>次</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>xx学校</td><td>xx学校</td><td>xx学校-小黄</td></tr>
+                    </table>
+                    <h5 class="material_detail_sub_title">物料/任务属性表</h5>
+                    <table class="material_info">
+                        <tr><th>关系</th><th>名称</th><th>单位</th><th>单位生产时间</th><th>单位簇</th><th>状态</th><th>优先级</th><th>是否需要反馈</th><th>过剩成果保留值</th><tr>
+                        <tr><td>本任务</td><td>生产100个笔和橡皮套装</td><td>个</td><td>2分钟</td><td>20</td><td>已完成</td><td>中</td><td>是</td><td>0%</td></tr>
+                        <tr><td>父任务</td><td>12月11日给学生加福利</td><td>件</td><td>20天</td><td>1</td><td>进行中</td><td>高</td><td>是</td><td>0%</td></tr>
+                        <tr><td>子任务</td><td>生产200只笔</td><td>只</td><td>2分钟</td><td>20</td><td>已完成</td><td>中</td><td>否</td><td>0%</td></tr>
+                        <tr><td>子任务</td><td>生产200只橡皮</td><td>只</td><td>30秒</td><td>20</td><td>已完成</td><td>中</td><td>否</td><td>0%</td></tr>
+                        <tr><td>兄弟任务</td><td>一次集体旅行</td><td>次</td><td>6天</td><td>1</td><td>反馈中</td><td>中</td><td>是</td><td>0%</td></tr>
+                    </table>
+                    <h5 class="material_detail_sub_title">物料/任务投票信息表</h5>
+                    <table class="material_vote_info">
+                        <tr><th>关系</th><th>名称</th><th>投票对象</th><th>对象类型</th><th>全员人数</th><th>投票人数</th><th>是否被否</th><th>支持数量</th><th>反对数量</th><th>是否通过</th><th>通过阈值</th><th>反否阈值</th><tr>
+                        <tr><td>本任务</td><td>生产100个笔和橡皮套装</td><td>xx文具制造厂</td><td>生产方</td><td>100</td><td>50</td><td>否</td><td>50</td><td>0</td><td>是</td><td>50%</td><td>90%</td></tr>
+                        <tr><td>父任务</td><td>12月11日给学生加福利</td><td>xx学校</td><td>需求方</td><td>300</td><td>152</td><td>否</td><td>150</td><td>2</td><td>是</td><td>50%</td><td>90%</td></tr>
+                        <tr><td>子任务</td><td>生产200只笔</td><td>xx文具制造厂铅笔分部</td><td>生产方</td><td>5</td><td>5</td><td>否</td><td>5</td><td>0</td><td>是</td><td>50%</td><td>90%</td></tr>
+                        <tr><td>子任务</td><td>生产200只橡皮</td><td>xx文具制造厂橡皮分部</td><td>生产方</td><td>5</td><td>3</td><td>否</td><td>3</td><td>0</td><td>是</td><td>50%</td><td>90%</td></tr>
+                        <tr><td>兄弟任务</td><td>一次集体旅行</td><td>xx学校</td><td>需求方</td><td>300</td><td>150</td><td>否</td><td>150</td><td>0</td><td>是</td><td>50%</td><td>90%</td></tr>
+                    </table>
+                    <h5 class="material_detail_sub_title">任务触发流程表</h5>
+                    <table class="material_touch_off_info">
+                        <tr><th>关系</th><th>名称</th><th>触发类型</th><th>开启时间</th><th>开启备注（读取操作表备注）</th><th>完成时间</th><th>完成备注/当前状态</th><tr>
+                        <tr><td>父任务</td><td>12月11日给学生加福利</td><td>手动</td><td>2021-12-10 10:00</td><td>学校想发福利</td><td>0000-00-00 00:00</td><td>任务进行中</td></tr>
+                        <tr><td>本任务</td><td>生产100个笔和橡皮套装</td><td>自动</td><td>2021-12-10 19:00</td><td>添加任务描述，并分配任务</td><td>2021-12-11 13:00</td><td>任务正常完成</td></tr>
+                        <tr><td>子任务</td><td>生产200只笔</td><td>自动</td><td>2021-12-11 08:00</td><td>机器创建</td><td>2021-12-11 14:00</td><td>一切正常</td></tr>
+                        <tr><td>子任务</td><td>生产200只橡皮</td><td>自动</td><td>2021-12-11 11:00</td><td>机器有点问题，11点才能开工</td><td>2021-12-11 13:00</td><td>正常完成</td></tr>
+                        <tr><td>兄弟任务</td><td>一次集体旅行</td><td>手动</td><td>2021-12-11 08:00</td><td>已准备妥当</td><td>0000-00-00 00:00</td><td>任务反馈中</td></tr>
+                    </table>
+                    <h5 class="material_detail_sub_title">任务操作历史记录表</h5>
+                    <table class="material_operation_history">
+                        <tr><th>操作类型</th><th>操作时间</th><th>操作人</th><th>操作ip（任务队长可见）</th><th>操作ua（任务队长可见）</th><th>操作备注</th><tr>
+                        <tr><td>触发</td><td>2021-12-10 19:00</td><td>系统触发</td><td>127.0.0.1</td><td>robot</td><td>无</td></tr>
+                        <tr><td>开启</td><td>2021-12-10 19:30</td><td>xx文具制造厂</td><td>192.168.1.101</td><td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0</td><td>添加任务描述，并分配任务</td></tr>
+                        <tr><td>修改</td><td>2021-12-11 13:00</td><td>xx文具制造厂</td><td>192.168.1.101</td><td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0</td><td>修改一些描述</td></tr>
+                        <tr><td>完成</td><td>2021-12-11 13:00</td><td>xx文具制造厂</td><td>192.168.1.101</td><td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0</td><td>任务正常完成</td></tr>
+                    </table>
+                    <h5 class="material_detail_sub_title">团队资金流水表</h5>
+                    <table class="material_operation_history">
+                        <tr><th>流水时间</th><th>金额</th><th>外部交易对象</th><th>支付方式</th><th>发票号</th><th>相关任务</th><th>备注</th><tr>
+                        <tr><td>2021-12-10 19:00</td><td>+60.50</td><td>xx公司</td><td>支付宝</td><td>123456</td><td>任务1</td><td>无</td></tr>
+                        <tr><td>2021-12-10 19:01</td><td>-79.00</td><td>xx公司</td><td>现金</td><td>123456</td><td>任务2</td><td>无</td></tr>
+                        <tr><td>2021-12-10 19:02</td><td>+76.00</td><td>xx公司</td><td>微信</td><td>123456</td><td>任务3</td><td>无</td></tr>
+                        <tr><td>2021-12-10 19:03</td><td>-20.00</td><td>xx公司</td><td>云闪付</td><td>123456</td><td>任务4</td><td>无</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="footer">
+        <p>荣耀地由 <a href="xxx" target="_blank" rel="nofollow">Bluebook</a> 驱动，并使用 <a href="xxx" target="_blank" rel="nofollow">GPL</a> 开源，enjoy～</p>
+    </div>
+</div>
+</body>
+</html>

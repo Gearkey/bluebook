@@ -1,0 +1,462 @@
+body {
+    margin: 0;
+    font: 1em/1.75 sans-serif, serif;
+    color: #111;
+    background: #ddd;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #11111188;
+    display: none;
+}
+
+.wrap {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #111;
+    text-align: center;
+}
+
+.header h2 {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 15px 30px;
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
+.header a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #ddd;
+}
+
+.header_home.focus,
+.header_home:hover {
+    border-bottom: 6px solid #3293f5;
+}
+
+.header_outside.focus,
+.header_outside:hover {
+    border-bottom: 6px solid #f5ba32;
+}
+
+.header_mine.focus,
+.header_mine:hover {
+    border-bottom: 6px solid #78aa1a;
+}
+
+.material_area {
+    width: 20%;
+    min-height: 10000px;
+    float: left;
+}
+
+.material_area_title {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.material_area_title h3 {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 0.875em;
+    background: #eee;
+    box-shadow: -1px -1px 1px #888;
+}
+
+.material_list {
+    padding: 0 10%;
+    border-right: 1px dashed #888;
+}
+
+.material {
+    height: 120px;
+    padding: 0 9%;
+    background: #3293f5;
+    border-radius: 10px;
+    color: #ddd;
+    box-shadow: 2px 2px 3px #888;
+    user-select: none;
+}
+
+.material_desc_title {
+    height: 16%;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 0.93em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.material p {
+    margin: 0;
+}
+
+.material_desc_content {
+    height: 40%;
+    font-size: 0.875em;
+    overflow: hidden;
+}
+
+.material_desc_time {
+    font-size: 0.75em;
+    text-align: right;
+}
+
+.material_detail {
+    width: 1000px;
+    min-height: 320px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    position: absolute;
+    background: #eee;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #888;
+    display: none;
+}
+
+.material_detail_title,
+.material_operation_form_title {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.material_detail_title {
+    display: block;
+    width: 100%;
+    background: #00000000;
+    color: #111;
+    margin: 10px 0;
+    padding: 5px;
+    border: unset;
+}
+
+.material_detail_sub_title {
+    font-size: 1em;
+}
+
+.material_detail_content,
+.material_operation_form_content {
+    margin: 20px 0;
+}
+
+.material_detail table {
+    font-size: 0.875em;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+
+.material_detail table th,
+.material_detail table td {
+    border: 1px solid #888;
+    padding: 3px 6px;
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.material_detail table th,
+.material_detail table tr:hover {
+	background-color: #ddd;
+}
+
+.material_operation_button_list {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.material_operation_button_list li {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background: #3293f5;
+    color: #ddd;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3;
+    user-select: none;
+}
+
+.material_operation_button_list li:hover {
+    background: #7eafe0;
+}
+
+.material_operation_form {
+    width: 320px;
+    min-height: 600px;
+    padding: 30px 40px;
+    position: absolute;
+    left: 113%;
+    top: 0;
+    background: #eee;
+    font-size: 0.875em;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #888;
+    display: none;
+}
+
+.material_operation_form_title {
+    margin: 0;
+}
+
+.material_operation_form_title_inside {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+.material_operation_form textarea {
+    width: 100%;
+    height: 100px;
+    line-height: 1.75;
+    font-family: sans-serif, serif;
+    resize: vertical;
+}
+
+.material_operation_form input {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.material_operation_form input[type=text],
+.material_operation_form input[type=password] {
+    width: 36%;
+    margin-right: 6px;
+}
+
+.material_operation_form input[type=text],
+.material_operation_form input[type=password],
+.material_operation_form input[type=submit],
+.material_operation_form input[type=button] {
+    padding: 2px 6px;
+    float: left;
+}
+
+.material_operation_form input[type=date],
+.material_operation_form input[type=time] {
+    width: 46%;
+}
+
+.material_operation_form input[type=datetime-local] {
+    width: 100%;
+}
+
+.material_operation_form ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.material_operation_form ul li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.material_operation_form p {
+    clear: both;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.875em;
+    color: #888;
+}
+
+.footer a {
+    color: #888;
+}
+
+/* 给 login.html 的样式内容 */
+.login {
+    width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    text-align: center;
+    background: #3293f5;
+    color: #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #888;
+}
+
+.login h1 {
+    font-size: 1.5em;
+}
+
+.login h2 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.login form {
+    padding: 0 80px;
+}
+
+.login input {
+    width: 100%;
+    margin: 6px 0;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 0 #3293f5;
+}
+
+.login a {
+    text-decoration: none;
+    color: #eee;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.login .register_field {
+    display: none;
+}
+
+/* 给 1280px 以上的设备使用 */
+@media screen and (max-width: 1348px){
+.wrap {
+    width: 1100px;
+}
+
+.material_area {
+    width: 25%;
+}
+
+.material_detail {
+    width: 800px;
+}
+
+.material_operation_form {
+    left: 117%;
+    width: 280px;
+}
+
+}
+
+/* 给 1024px 以上的设备使用 */
+@media screen and (max-width: 1220px){
+.wrap {
+    width: 860px;
+}
+
+.material_area {
+    width: 33%;
+}
+
+.material_detail {
+    width: 680px;
+}
+
+.material_operation_button_list {
+    left: 0;
+    top: 100%;
+}
+
+.material_operation_button_list li {
+    float: left;
+}
+
+.material_operation_form {
+    left: 0;
+    top: 125%;
+    width: 680px;
+}
+
+}
+
+/* 给 800px 以上的设备使用 */
+@media screen and (max-width: 920px){
+.wrap {
+    width: auto;
+    padding: 0 5%;
+}
+
+.material_detail {
+    width: 70%;
+}
+
+.material_operation_form {
+    width: 87%;
+}
+
+}
+
+/* 给平板使用 */
+@media screen and (max-width: 777px){
+.wrap {
+    padding: 0 5%;
+}
+
+.material_area {
+    width: 50%;
+}
+
+.header h2 {
+    font-size: 1.2em;
+}
+
+.material_detail {
+    width: 70%;
+}
+
+.material_operation_button_list li {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    font-size: 0.75em;
+}
+
+}
+
+/* 给手机使用 */
+@media screen and (max-width: 600px){
+.wrap {
+    padding: 0;
+}
+
+.material_list {
+    padding: 0 5%;
+}
+
+.header h2 {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+.login {
+    width: auto;
+    margin: 20% 10%;
+}
+
+.login h1 {
+    font-size: 1em;
+}
+
+.login h2 {
+    font-size: 0.875em;
+}
+
+.login form {
+    padding: 0 10%;
+}
+
+}

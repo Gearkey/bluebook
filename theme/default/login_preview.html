@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录到 Bluebook</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="Shortcut icon" href="res/icon.jpg"/>
+<link rel="stylesheet" href="style.css"/>
+<script src="main.js"></script>
+</head>
+<body>
+    <div class="cover"><!-- 遮罩层 --></div>
+    <div class="login">
+        <h1>登录到 Bluebook</h1>
+        <h2>欢迎来到 Bluebook 的世界，从此开始愉悦生活</h2>
+        <form>
+            <input type="text" name="user_name" placeholder="用户名/邮箱/电话"/>
+            <input type="password" name="" placeholder="输入密码"/>
+            <div class="register_field" id="register_field">
+                <input type="password" name="" placeholder="再次输入密码"/>
+                <input type="text" name="" placeholder="推荐人用户名/邮箱/电话"/>
+            </div>
+            <input id="login_button" type="submit" value="登录" name=""/>
+            <a id="i_want_register" href="javascript:void(0);" onclick="display_register_field();">我要注册</a>
+        </form>
+    </div>
+</body>
+</html>

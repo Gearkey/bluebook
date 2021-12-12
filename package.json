@@ -1,0 +1,20 @@
+{
+    "name": "bluebook",
+    "version": "0.1.0",
+    "description": "一款自由的协作管理工具",
+    "main": "app.js",
+    "scripts": {
+        "mysql": "npm install mysql --save",
+        "art-template": "npm install art-template --save",
+        "cookie-parser": "npm install cookie-parser --save"
+    },
+    "private": true,
+    "author": "Gaerkey (https://github.com/gearkey)",
+    "homepage": "https://github.com/gearkey/bluebook",
+    "bugs": "https://github.com/gearkey/bluebook/issues",
+    "license": "GPL",
+    "dependencies": {
+        "art-template": "^4.13.2",
+        "mysql": "^2.18.1"
+    }
+}

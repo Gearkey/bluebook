@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{app_title}}</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="Shortcut icon" href="res/icon.jpg"/>
+<link rel="stylesheet" href="style.css"/>
+<script src="main.js"></script>
+</head>
+<body>
+<div class="cover" id="cover" onclick="hide_material_detail();"></div>
+<div class="header">
+    <h2 class="header_home focus"><a href="/">{{app_header_home}}</a></h2>
+    <h2 class="header_outside"><a href="outside">{{app_header_outside}}</a></h2>
+    <h2 class="header_mine"><a href="mine">{{app_header_mine}}</a></h2>
+</div>
+<div class="wrap">
+    <div class="main">
+        <div class="material_area">
+            <div class="material_area_title" onclick="display_material_detail()"><h3>{{material_area_title_opened}}</h3></div>
+            <div class="material_list">
+                <div class="material" id="multi_selection_start_material" onclick="display_material_detail();" ondblclick="turn_on_multi_selection_mode();">
+                    <h4 class="material_desc_title">{{material_title}}</h4>
+                    <p class="material_desc_content">{{material_desc}}</p>
+                    <p class="material_desc_time">{{material_desc_time}}</p>
+                </div>
+                <div class="material_detail" id="material_detail">
+                    <ul class="material_operation_button_list">
+                        <li class="material_operation_button" id="material_operation_focus_button" onclick="display_material_operation_form();">{{material_operation_support}}</li>
+                        <li class="material_operation_button">{{material_operation_oppose}}</li>
+                        <li class="material_operation_button">{{material_operation_split}}</li>
+                        <li class="material_operation_button">{{material_operation_automate}}</li>
+                        <li class="material_operation_button">{{material_operation_modify}}</li>
+                        <li class="material_operation_button">{{material_operation_finish}}</li>
+                        <li class="material_operation_button">{{material_operation_cancel}}</li>
+                    </ul>
+                    <form class="material_operation_form" id="material_operation_form">
+                        <h5 class="material_operation_form_title">{{material_operation_form_title}}</h5>
+                        <div class="material_operation_form_content">{{material_operation_form_content}}</div>
+                    </form>
+                    <input class="material_detail_title"  id="material_detail_title" oncdblick="edit_material_detail_title();" type="text" value="{{material_title}}" readonly="readonly"/>
+                    <div class="material_detail_content" id="material_detail_content" ondbclick="edit_material_detail_content();">{{material_content}}</div>
+                    <h5>{{material_detail_connection_tree}}</h5><table class="material_tree"></table>
+                    <h5>{{material_detail_material_info}}</h5><table class="material_info"></table>
+                    <h5>{{material_detail_vote_info}}</h5><table class="material_vote_info"></table>
+                    <h5>{{material_detail_trigger_process}}</h5><table class="material_trigger_process"></table>
+                    <h5>{{material_detail_operation_history}}</h5><table class="material_operation_history"></table>
+                    <h5>{{group_detail_flow_info}}</h5><table class="group_flow_info"></table>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="footer">
+        <p>荣耀地由 <a href="{{app_link}}" target="_blank" rel="nofollow">{{app_title}}</a> 驱动，并使用 <a href="{{app_licence_link}}" target="_blank" rel="nofollow">GPL</a> 开源，enjoy～</p>
+    </div>
+</div>
+</body>
+</html>
