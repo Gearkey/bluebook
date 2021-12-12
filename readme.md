@@ -49,3 +49,5 @@ npm install art-template --save
 v0.1.0-20211212：基本框架的建立
 ```
 
+![](https://github.com/gearkey/bluebook_doc/blob/master/0-当前基本预览.png?raw=true)
+
