@@ -1,13 +1,12 @@
 const http = require("http");
 const host = "localhost";
 const port = "8888";
-const server = http.createServer(app);
 const template = require("art-template");
-const cookie_parser = require("cookie-parser");
+// const cookie_parser = require("cookie-parser");
 
 const app = require("./control/app_router"); // 软件的路由基础
 const app_init = require("./control/app_init"); // 建立初始数据表及数据库相关操作
-const app_login = require("./control/app_ogin"); // 登录/注册的逻辑
+const app_login = require("./control/app_login"); // 登录/注册的逻辑
 const app_conf = require("./control/app_conf"); // 软件配置项的操作逻辑
 const main_material = require("./control/main_material"); // 任务卡片的操作逻辑
 const main_material_area = require("./control/main_material_area"); // 任务卡片区域的操作逻辑
@@ -17,6 +16,8 @@ const main_material_operation_form = require("./control/main_material_operation_
 const main_material_table = require("./control/main_material_table"); // 任务详情表格的操作逻辑
 const mine_uaer_info = require("./control/mine_uaer_info"); // 用户资料信息卡的操作逻辑
 const mine_group_info = require("./control/mine_group_info");  // 团队资料信息卡的操作逻辑
+
+const server = http.createServer(app);
 const theme_path = __dirname + "/theme/default/";
 
 app.get("/", (req, res) => {
