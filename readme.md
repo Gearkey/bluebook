@@ -58,5 +58,5 @@ v0.1.1-20211213：现在模板可以跑起来了
 
 ## 截图预览
 
-![](https://github.com/gearkey/bluebook_doc/blob/master/0-当前基本预览.png?raw=true)
+![0-当前基本预览.png](https://s2.loli.net/2021/12/13/PBnVA6S92UGpLFh.png)
 
