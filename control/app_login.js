@@ -6,4 +6,4 @@ function app_login(){
     };
 }
 
-module.exports = app_login();
+module.exports = app_login;

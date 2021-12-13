@@ -21,7 +21,7 @@ const server = http.createServer(app);
 const theme_path = __dirname + "/theme/default/";
 
 app.get("/", (req, res) => {
-    let app_login_obj = new app_login;
+    app_login_obj = new app_login();
     
     /* 判断是否未登录，已登录继续，未登录跳转到 login */
     if (app_login_obj.is_not_login()){
@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
     }
 
     // fixme
-    let app_init_obj = new app_init();
+    app_init_obj = new app_init();
     connection = app_init_obj.get_database_connection();
     //materials = get_all_material();
     

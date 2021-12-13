@@ -175,4 +175,4 @@ function app_init(){
     };
 }
 
-module.exports = app_init();
+module.exports = app_init;

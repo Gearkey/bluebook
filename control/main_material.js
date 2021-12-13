@@ -26,5 +26,5 @@ function main_material(){
     };
 }
 
-module.exports = main_material();
+module.exports = main_material;
 

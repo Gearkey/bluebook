@@ -2,4 +2,4 @@ function app_conf(){
     // todo
 }
 
-module.exports = app_conf();
+module.exports = app_conf;
