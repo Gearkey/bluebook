@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 
     // fixme
     app_init_obj = new app_init();
-    connection = app_init_obj.get_database_connection();
+    //connection = app_init_obj.get_database_connection();
     //materials = get_all_material();
     
     // 通过 art-template 拼合模板内容
