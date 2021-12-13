@@ -31,7 +31,7 @@ function app_init(){
                 "group_realname varchar, " + // 团队全名/用户实名（加盐对称加密储存）
                 "group_identity_no varchar, " + // 团队社会认证号码/用户身份证号（加盐对称加密储存）
                 "group_default_vote_pass_percent tinyint, " + // 团队默认投票自动通过的百分比阈值
-                "group_default_vote_power_percent tinyint, " + // 团队默认投票自动通过的百分比阈值（group_default_vote_pass_percent，int）
+                "group_default_vote_power_percent tinyint, " + // 团队默认投票反否的百分比阈值
                 "group_surplus decimal(14,4), " + // 团队节余/用户余额（精确到厘位）
                 "group_state tinyint, " + // 团队/用户状态（0-正常，1-关闭，2-封禁，3-死亡，4-注销）
                 "group_for_parent_status varchar" + // 用户/团队相对父团队的身份
@@ -41,7 +41,7 @@ function app_init(){
             "create table group_connection (" +
                 "group_connection_id uuid, " + // 关系id
                 "group_id uuid, " + // 用户/子团队id
-                "group_parent uuid, " + // 父团队id
+                "group_parent uuid" + // 父团队id
             ");",
 
             /* 团队物料/任务表 */
@@ -67,14 +67,14 @@ function app_init(){
                 "material_vote_power_percent tinyint, " + // 物料/任务可否决一票否决的百分比阈值（反否阈值）
                 "material_harvest_percent tinyint, " + // 物料/任务过剩成果保留给生产团队集体的百分比值
                 "material_is_outside boolean" + // 是否团队外部物料/任务（可能可以化简）
-                "material_for_parent_status varchar, " + // 物料/任务相对父物料/任务的身份
+                "material_for_parent_status varchar" + // 物料/任务相对父物料/任务的身份
             ");",
             
             /* 物料任务多对多关系表 */
             "create table group_material_connection (" + 
                 "material_connection_id uuid, " + // 物料任务对应id
                 "material_id varchar uuid, " + // 物料/任务id
-                "material_parent uuid, " + // 父物料/任务id
+                "material_parent uuid" + // 父物料/任务id
             ");",
 
             /* 团队投票决策表 */
@@ -88,7 +88,7 @@ function app_init(){
                 "vote_is_vote_power boolean, " + // 是否行使一票否决权（false 不行使，true 行使）
                 "vote_is_feedback boolean, " + // 投票对象是否需要在获得结果后反馈（false 不需要，true 需要）
                 "vote_feedback_is_satisfied boolean, " + // 投票对象对此物料/任务的结果是否满意（false 不满意，true 满意）
-                "vote_feedback_desc varchar, " + // 投票对象对此选票的反馈内容
+                "vote_feedback_desc varchar" + // 投票对象对此选票的反馈内容
             ");",
 
             /* 触发/操作信息表 */
@@ -102,13 +102,13 @@ function app_init(){
                 "operation_group uuid, " + // 操作人
                 "operation_ip varchar, " + // 操作ip
                 "operation_ua varchar, " + // 操作ua
-                "operation_remark varchar, " + // 操作备注
+                "operation_remark varchar" + // 操作备注
             ");",
 
             /* 软件配置表 */
             "create table app_conf (" + 
                 "conf_key varchar, " + // 配置项id
-                "conf_value varchar, " + // 配置项值
+                "conf_value varchar" + // 配置项值
             ");",
 
             /* 团队资金流水表 */
@@ -121,7 +121,7 @@ function app_init(){
                 "flow_pay_card_number varchar, " + // 外部交易对象银行卡号/支付软件id
                 "flow_pay_amount decimal(14,4), " + // 流水支付金额（精确到厘）
                 "flow_serial_no varchar, " + // 外部交易支付方式提供的流水号
-                "flow_invoice_no varchar, " + // 外部交易的发票号
+                "flow_invoice_no varchar" + // 外部交易的发票号
             ");",
 
             /* 外部交易对象表 */
@@ -135,14 +135,14 @@ function app_init(){
                 "outside_group_identity_no varchar, " + // 外部交易对象社会认证号码/身份证号
                 "outside_group_surplus decimal(14,4), " + // 预估其货币价值
                 "outside_group_state tinyint, " + // 外部交易对象状态（0-正常，1-关闭，2-黑名单）
-                "outside_group_for_parent_state varchar, " + // 子交易对象相对父交易对象的身份（，varchar）
+                "outside_group_for_parent_state varchar" + // 子交易对象相对父交易对象的身份（，varchar）
                 ");",
 
             /* 外部交易对象关系表 */
             "create table outside_group_connection (" + 
                 "outside_group_connection_id uuid, " + // 关系id
                 "outside_group_id uuid, " + // 子交易对象id
-                "outside_group_parent uuid, " + // 父交易对象id
+                "outside_group_parent uuid" + // 父交易对象id
             ");",
 
             /* 外部对象操作信息表 */
@@ -156,7 +156,7 @@ function app_init(){
                 "operation_group uuid, " + // 操作人
                 "operation_ip varchar, " + // 操作ip
                 "operation_ua varchar, " + // 操作ua
-                "operation_remark varchar, " + // 操作备注
+                "operation_remark varchar" + // 操作备注
             ");",
         ]
 
