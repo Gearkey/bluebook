@@ -30,8 +30,7 @@ Bluebook 是一款开源自由的协作管理工具。
 + 确定主题和模块模板，并征求开发
 + 开发内置扩展模块
 
-设计的核心思路是在团队内将一般等价物由货币改为时间，[理论基础见此](https://bbs.popkart.org/?thread-14.htm)。  
-大体是生产过剩的问题被解决，化劣势为优势，个人和团队自由组合，分散式的投票制，[官方社区](https://bbs.popkart.org/)，有兴趣的还可以加 [Telegram](https://t.me/bluebook2) 或 QQ 群 901401567（另有一个技术交流群 192078093，入群须知见[此处](https://bbs.popkart.org/?thread-36.htm)）。
+[官方社区](https://bbs.popkart.org/)，有兴趣的还可以加 [Telegram](https://t.me/bluebook2) 或 QQ 群 901401567（另有一个技术交流群 192078093，入群须知见[此处](https://bbs.popkart.org/?thread-36.htm)）。
 
 ![firefox_信仰充值中心_andro_it_合并二维码.png](https://s2.loli.net/2022/02/02/ZQoeYtu7kl3i58C.png)
 
